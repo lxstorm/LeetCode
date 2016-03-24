@@ -1,3 +1,4 @@
+/* first AC solution
 class Solution {
 public:
     string longestPalindrome(string s) {
@@ -32,6 +33,42 @@ public:
                 mr = r;
             }
             ++i;
+        }
+        return s.substr(ml, maxLen);
+    }
+};
+*/
+/*
+    second AC version
+    try to seperate the string to some palindromic parts
+    if we skip the duplicate characters,then the center can directly skip the
+    palindromic part to find the next palindromic part;
+
+*/
+class Solution {
+public:
+    string longestPalindrome(string s) {
+        if(s.size() < 2)
+            return s;
+        int maxLen = 0;
+        int ml = 0;
+        int start = 0;
+        while(start < s.size() && start < (s.size() - maxLen/2)){
+            int l = start;
+            int r = l;
+            while(r < s.size() && s[r] == s[r+1]){
+                ++r;
+            }
+            start = r + 1;
+            while(l > 0 && r < s.size()-1 && s[l-1] == s[r+1]){
+                ++r;
+                --l;
+            }
+            int newLen = r - l + 1;
+            if(maxLen < newLen){
+                maxLen = newLen;
+                ml = l;
+            }
         }
         return s.substr(ml, maxLen);
     }
