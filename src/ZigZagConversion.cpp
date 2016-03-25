@@ -4,6 +4,9 @@
     ..A..P....L..S....I...I....G
     ....Y.......I........R
 
+    use numRows string array to put the characters;
+    attention the one row string ;
+
 */
 class Solution {
 public:
