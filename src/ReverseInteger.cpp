@@ -1,24 +1,20 @@
 class Solution {
 public:
     int reverse(int x) {
-        int res = 0;
+        long long res = 0;
         int sgn = 1;
-        // 1 denote the positive , 0 negative
-        if (x >= 0){
-            sgn = 1;
-        }
-        else{
+        if (x < 0){
             sgn = 0;
             x = -x;
         }
-        while(x / 10 > 0){
+        while(x  > 0){
             res = res * 10 + x  % 10;
             x = x / 10;
         }
-        res = res * 10 + x  % 10;
-        if(res > 2147483647 )
-            return 0;
         sgn == 1 ? : res = -res;
+        cout<<res<<endl;
+        if(res >= INT_MAX || res <=INT_MIN)
+            return 0;
         return res;
     }
 };
