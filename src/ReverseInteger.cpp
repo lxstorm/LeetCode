@@ -12,7 +12,6 @@ public:
             x = x / 10;
         }
         sgn == 1 ? : res = -res;
-        cout<<res<<endl;
         if(res >= INT_MAX || res <=INT_MIN)
             return 0;
         return res;
