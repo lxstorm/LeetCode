@@ -12,7 +12,7 @@ public:
             x = x / 10;
         }
         sgn == 1 ? : res = -res;
-        if(res >= INT_MAX || res <=INT_MIN)
+        if(res > INT_MAX || res <INT_MIN)
             return 0;
         return res;
     }
