@@ -1,3 +1,4 @@
+/* former solution
 class Solution {
 public:
     bool isValid(string s) {
@@ -26,8 +27,9 @@ public:
             return false;
     }
 };
+*/
 
-    a try to use stack and map
+// a try to use stack and map
 class Solution{
 public:
     bool isValid(string s){
