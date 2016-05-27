@@ -1,4 +1,4 @@
-/* my first AC version
+/* my first AC version is also fast if delete the if-statement in line 25~26
 class Solution {
 public:
     vector<string> letterCombinations(string digits) {
@@ -41,3 +41,24 @@ public:
     }
 };
 */
+class Solution{
+public:
+    vector<string> letterCombinations(string digits){
+        vector<string> res;
+        string charmap[] = {"","","abc","def","ghi","jkl","mno",
+                            "pqrs","tuv","wxyz"};
+        if(digits.size() == 0)
+            return res;
+        res.push_back("");
+        for(int i = 0;i < digits.size();++i){
+            string tmpchar = charmap[digits[i] - '0'];
+            vector<string> tmpres;
+            for(int j = 0;j < res.size();++j)
+                for(int k = 0;k < tmpchar.size();++k)
+                    tmpres.push_back(res[j] + tmpchar[k]);
+            res = tmpres;
+        }
+
+        return res;
+    }
+};
