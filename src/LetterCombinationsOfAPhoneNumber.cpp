@@ -58,7 +58,6 @@ public:
                     tmpres.push_back(res[j] + tmpchar[k]);
             res = tmpres;
         }
-
         return res;
     }
 };
