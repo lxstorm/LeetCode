@@ -75,3 +75,43 @@ public:
         return {-1, -1};
     }
 };
+
+/*    two binary search methond
+ *    two mid and its explanation
+ *    the first mid = (i + j) / 2; consider that if the sequence is {0,0,0,1,1}
+ *    it is left biased, if there left two element 0 1, then we can have
+ *    [0 0] [1 1] part(we want to get 1);
+ *    the second mid = (i + j) / 2 + 1;
+
+
+class Solution{
+public:
+    vector<int> searchRange(vector<int>& nums, int target){
+        int i = 0;
+        int j = nums.size() - 1;
+        vector<int> res(2, -1);
+
+        while(i < j){
+            int mid = (i + j) / 2;
+            if(nums[mid] < target)
+                i = mid + 1;
+            else
+                j = mid;
+        }
+        if(nums[i] != target)
+            return res;
+        else
+            res[0] = i;
+        j = nums.size() - 1;
+        while(i < j){
+            int mid = (i + j) / 2 + 1;
+            if(nums[mid] > target)
+                j = mid - 1;
+            else
+                i = mid;
+        }
+        res[1] = j;
+        return res;
+    }
+};
+*/
