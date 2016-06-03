@@ -75,14 +75,15 @@ public:
         return {-1, -1};
     }
 };
-
+/******************************************************************************/
 /*    two binary search methond
  *    two mid and its explanation
  *    the first mid = (i + j) / 2; consider that if the sequence is {0,0,0,1,1}
- *    it is left biased, if there left two element 0 1, then we can have
- *    [0 0] [1 1] part(we want to get 1);
- *    the second mid = (i + j) / 2 + 1;
-
+ *    1.it is left biased, the mid is always divided into left section;
+ *        if there left two element 0 1, then we can have
+ *        [0 0] [1 1] part(we want to get 1, now the mid is 0)
+ *    2.the second mid = (i + j) / 2 + 1;
+ *      the mid is always divided into the right section;
 
 class Solution{
 public:
