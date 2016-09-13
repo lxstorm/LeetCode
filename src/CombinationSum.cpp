@@ -19,6 +19,7 @@ private:
         else{
             for(int i = begin;i < candidates.size() && target >= candidates[i];++i){
                 combination.push_back(candidates[i]);
+                // iterative 迭代
                 elementSum(candidates, combination, result, i, target - candidates[i]);
                 combination.pop_back();
             }
