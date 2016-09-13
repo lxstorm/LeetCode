@@ -5,6 +5,23 @@ public:
 
         vector<vector<int>> result;
         vector<int> combination;
-        for(int i = 0;i < )
+
+        elementSum(candidates,combination,result,0,target);
+        return result;
+    }
+private:
+    void elementSum(vector<int>& candidates, vector<int>& combination,
+            vector<vector<int>>& result,int begin, int target){
+        if(target == 0){
+            result.push_back(combination);
+            return;
+        }
+        else{
+            for(int i = begin;i < candidates.size() && target >= candidates[i];++i){
+                combination.push_back(candidates[i]);
+                elementSum(candidates, combination, result, i, target - candidates[i]);
+                combination.pop_back();
+            }
+        }
     }
 };
