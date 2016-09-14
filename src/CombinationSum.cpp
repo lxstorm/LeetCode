@@ -16,7 +16,7 @@ private:
         // for(int i = 0;i<combination.size();++i){
         //     cout<<combination[i]<<" ";
         // }
-        cout<<endl;
+        //cout<<endl;
         if(target == 0){
             result.push_back(combination);
             return;
