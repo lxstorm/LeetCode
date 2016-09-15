@@ -30,7 +30,7 @@ private:
         }
     }
 };
-/* another swap method
+/* another swap method;
 class Solution {
 public:
     vector<vector<int>> permute(vector<int>& nums) {
@@ -44,6 +44,7 @@ private:
     {
         if(begin >= nums.size()){
             result.push_back(nums);
+            return;
         }
         else{
             for(int i = begin;i < nums.size();++i){
