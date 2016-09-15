@@ -1,8 +1,6 @@
 class Solution {
 public:
     vector<vector<int>> permute(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-
         vector<vector<int>> res;
         vector<int> combination;
         vector<int> mem(nums.size(), 0);
@@ -32,3 +30,28 @@ private:
         }
     }
 };
+/* another swap method
+class Solution {
+public:
+    vector<vector<int>> permute(vector<int>& nums) {
+        vector<vector<int>> res;
+        permuteRecursive(nums, res, 0);
+
+        return res;
+    }
+private:
+    void permuteRecursive(vector<int> &nums, vector<vector<int>> &result, int begin)
+    {
+        if(begin >= nums.size()){
+            result.push_back(nums);
+        }
+        else{
+            for(int i = begin;i < nums.size();++i){
+                swap(nums[begin], nums[i]);
+                permuteRecursive(nums, result, begin + 1);
+                swap(nums[begin], nums[i]);
+            }
+        }
+    }
+};
+*/
