@@ -16,6 +16,11 @@ public:
         int i;
         for(i = 0;i < result.size() - 1 && result[i] == '0';++i){
         }
+        /* another method
+        // size_t startpos = result.find_first_not_of("0");
+        *  if(startpos != string::npos)
+        *       return result.substr(startpos);
+        */
         return result.substr(i);
     }
 };
