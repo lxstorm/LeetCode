@@ -12,7 +12,7 @@ public:
 
         int count = 0;
         vector<int> position{0, -1};
-        vector<int> idir;
+        vector<int> cur_dir;
 
         while(steps[count % 2]){
             cur_dir = directions[count % 4];
@@ -25,6 +25,5 @@ public:
             count++;
         }
         return result;
-
     }
 };
