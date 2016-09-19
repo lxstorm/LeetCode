@@ -53,6 +53,7 @@ public:
     }
 };
 // another solution use sort
+/*
 class Solution{
 public:
     vector<Interval> merge(vector<Interval>& intervals) {
@@ -75,3 +76,4 @@ private:
         return a.start < b.start;
     }
 };
+*/
