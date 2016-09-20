@@ -1,6 +1,7 @@
 class Solution {
 public:
     vector<vector<int>> generateMatrix(int n) {
+        // we can use vector<vector<int>> result(n, vector<int>(n));
         vector<int> tmp(n, 0);
         vector<vector<int>> result(n, tmp);
 
