@@ -7,6 +7,7 @@ public:
         int cnt = 0;
         while(s[i] == ' ' && i >= 0)
             --i;
+        // we can also use s[i] != ' ' instead of isalpha()
         while(isalpha(s[i]) && i >= 0){
             --i;
             cnt++;
