@@ -41,19 +41,21 @@ public:
 class Solution{
 public:
     string simplifyPath(string path){
-        vector<string> vstk;
+        string tmp, result;
         stringstream ss(path);
-        string tmp;
-        while(getline(ss, tmp, '/')){
-            if(tmp == '' || tmp == '.')
-                continue;
-            if(tmp == '..'){
-                if(vstk.size() != 0)
+        vector<string> vstk;
+        while(getline(ss,tmp,'/')){
+            if(tmp == "." || tmp == "") continue;
+            if(tmp == ".."){
+                if(!vstk.empty())
                     vstk.pop_back();
             }
             else
                 vstk.push_back(tmp);
         }
-        for(int i = 0;i)
+        result = "";
+        for(int i = 0;i < vstk.size();++i)
+            result = result + "/" + vstk[i];
+        return result.empty() ? "/" : result;
     }
 };
