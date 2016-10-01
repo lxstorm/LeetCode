@@ -21,7 +21,7 @@ public:
             }
     }
 };
-/* another O(1) solution*/
+/* another O(1) solution
 class Solution{
 public:
     void setZeroes(vector<vector<int>>& matrix){
@@ -39,7 +39,7 @@ public:
                 }
             }
         }
-        // if we do not from r - 1 to 0, when row[0][0] == 0, the row0 will be 
+        // if we do not from r - 1 to 0, when row[0][0] == 0, the row0 will be
         // all 0, that will affect the following number;
         // and the statement (col == 0) should be placed after the j-for to avoid
         // after we set matrix[i][0] = 0, then when we check matrix(i, 0) matrix(j, 0)
@@ -53,3 +53,4 @@ public:
         }
     }
 };
+*/
