@@ -38,3 +38,12 @@ public:
     }
 };
 */
+/*  can also use bit manipulation, if 1, 2, 3
+    so 0 0 0 means 1 not 2 not 3 not in
+       0 0 1 means 1 not 2 not 3 is in
+       there are 2 ^ 3 = 8 subsets assume they are in subsets_list
+       for i in 1...8:
+        for j in 0...2: (3 nums)
+            if(i >> j & 1):  // jth bit
+                subsets_list[i].push_back(nums[j])
+*/
