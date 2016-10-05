@@ -11,3 +11,6 @@ public:
         return i;
     }
 };
+/*
+    we can also use i that indict the last pos of the modified sub vector
+*/
