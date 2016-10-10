@@ -20,6 +20,7 @@ private:
             return findkth(nums2, l2, n, nums1, l1, m, k);
         if(m == 0)
             return nums2[l2 + k - 1];
+        // avoid i = 0
         if(k == 1)
             return min(nums1[l1], nums2[l2]);
         int i = min(m, k / 2);
